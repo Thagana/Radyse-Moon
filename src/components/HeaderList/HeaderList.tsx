@@ -1,18 +1,20 @@
 import React from 'react';
 import {View, Text, TextInput} from 'react-native';
+import LatestNews from '../LatestNews';
 
 import styles from './Header.style';
 
 type Props = {
   term: string;
   setTerm(param: string): void;
+  latest: any[];
   navigation: {
     navigate(param: string): void;
   };
 };
 
 export default function HeaderList(props: Props) {
-  const {term, setTerm, navigation} = props;
+  const {term, setTerm, navigation, latest} = props;
 
   const mounted = React.useRef(true);
 
@@ -38,6 +40,7 @@ export default function HeaderList(props: Props) {
           style={styles.search}
         />
       </View>
+      <LatestNews latest={latest} />
     </>
   );
 }

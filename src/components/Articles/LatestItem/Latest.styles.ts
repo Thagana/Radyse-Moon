@@ -3,49 +3,51 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {RALEWAY_BLACK, RALEWAY_BOLD} from '../../common/fonts';
+import {RALEWAY_BLACK, RALEWAY_BOLD} from '../../../common/fonts';
 
 const styles = StyleSheet.create({
-  card: {
+  container: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: '#fff',
     shadowColor: '#000',
     borderRadius: wp(1),
     marginHorizontal: wp(3),
     marginVertical: hp(0.5),
     justifyContent: 'space-between',
-    height: hp(16),
-    width: wp(95),
+    height: hp(26),
+    width: wp(75),
+  },
+  image: {
+    width: wp(75),
+    height: hp(26),
+    borderRadius: wp(2),
   },
   content: {
-    flex: 1,
-    flexDirection: 'column',
+    bottom: wp(25),
   },
-  headerText: {
+  titleText: {
     fontFamily: RALEWAY_BOLD,
-    color: '#000',
+    color: '#fff',
     fontSize: wp(3.5),
     fontWeight: 'bold',
     marginLeft: wp(2),
   },
   pipe: {
     marginHorizontal: wp(1),
-    color: '#000',
+    color: '#fff',
   },
   sourceText: {
     fontFamily: RALEWAY_BLACK,
     color: '#007AFF',
   },
-  cardFooter: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: wp(2),
-    marginVertical: hp(1),
-  },
   publishedAtText: {
     fontFamily: RALEWAY_BLACK,
-    color: '#000',
+    color: '#fff',
+  },
+  footer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: wp(2),
   },
 });
 

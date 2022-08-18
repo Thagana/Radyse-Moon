@@ -32,7 +32,6 @@ instance.interceptors.request.use(
     if (config.url && config.url.charAt(0) === '/') {
       config.url = `${baseURL}${config.url}`;
     }
-    console.log(config.url);
 
     if (config.headers) {
       config.headers.authorization = `Bearer ${token}`;

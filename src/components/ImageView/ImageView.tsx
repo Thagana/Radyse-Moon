@@ -1,6 +1,5 @@
 import React from 'react';
 import {Image} from 'react-native';
-
 import styles from './ImageView.style';
 
 type Props = {

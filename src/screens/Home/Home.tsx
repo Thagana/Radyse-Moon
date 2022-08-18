@@ -106,7 +106,7 @@ const Home = (props: Props) => {
 
   React.useEffect(() => {
     fetchNews();
-  }, [connected, fetchNews, page]);
+  }, [fetchNews, page]);
 
   React.useEffect(() => {
     return () => {
@@ -128,6 +128,7 @@ const Home = (props: Props) => {
               <HeaderList
                 navigation={props.navigation}
                 term={term}
+                latest={articles}
                 setTerm={setTerm}
               />
             }
