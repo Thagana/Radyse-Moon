@@ -36,6 +36,7 @@ const style = StyleSheet.create({
     borderWidth: wp(0.3),
     color: '#fff',
     padding: wp(5),
+    backgroundColor: '#fff',
   },
   itemsHeader: {
     marginHorizontal: 3,
