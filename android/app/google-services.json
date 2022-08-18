@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "214469640588",
+    "project_id": "radyse-moon",
+    "storage_bucket": "radyse-moon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214469640588:android:c571cc1d1e916ed566d6a9",
+        "android_client_info": {
+          "package_name": "com.RadyseMoon.samuel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214469640588-6p31v4dq2stie44n81hq64pkr7ilckv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR-34EFVoQQZG2AB9BDe3NON8XR7kUsL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214469640588-6p31v4dq2stie44n81hq64pkr7ilckv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
