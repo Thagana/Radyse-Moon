@@ -21,6 +21,7 @@ type Props = {
 };
 
 const Home = (props: Props) => {
+  const {navigation} = props;
   const [term, setTerm] = React.useState('');
   const [refreshing, setRefreshing] = React.useState(false);
   const [articles, setArticle] = React.useState<any>([]);
@@ -139,7 +140,9 @@ const Home = (props: Props) => {
             ListEmptyComponent={EmptyList}
             onEndReachedThreshold={0.2}
             onEndReached={fetchMoreData}
-            renderItem={({item}) => <Article item={item} isDownload={false} />}
+            renderItem={({item}) => (
+              <Article item={item} isDownload={false} navigation={navigation} />
+            )}
             keyExtractor={(_, index) => index.toString()}
           />
           <View />
