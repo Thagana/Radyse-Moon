@@ -63,8 +63,5 @@
       "json",
       "node"
     ]
-  },
-  "resolutions": {
-    "styled-components": "^5"
   }
 }

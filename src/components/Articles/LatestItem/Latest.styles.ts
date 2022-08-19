@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
     fontSize: wp(3.5),
     fontWeight: 'bold',
     marginLeft: wp(2),
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: wp(2),
   },
   pipe: {
     marginHorizontal: wp(1),
@@ -43,6 +46,9 @@ const styles = StyleSheet.create({
   publishedAtText: {
     fontFamily: RALEWAY_BLACK,
     color: '#fff',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: wp(2),
   },
   footer: {
     flexDirection: 'row',

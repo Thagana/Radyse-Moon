@@ -1,3 +1,4 @@
+import {RALEWAY_REGULAR} from './../../common/fonts';
 import {StyleSheet} from 'react-native';
 import {
   widthPercentageToDP as wp,
@@ -33,13 +34,21 @@ const style = StyleSheet.create({
   },
   search: {
     borderRadius: wp(3),
-    borderWidth: wp(0.3),
-    color: '#fff',
+    borderWidth: wp(0.1),
+    color: '#808080',
     padding: wp(5),
     backgroundColor: '#fff',
   },
   itemsHeader: {
     marginHorizontal: 3,
+  },
+  allNews: {
+    color: '#000',
+    fontFamily: RALEWAY_REGULAR,
+    padding: wp(2),
+    fontWeight: 'bold',
+    paddingHorizontal: wp(5),
+    textDecorationLine: 'underline',
   },
   listContainer: {
     flex: -1,

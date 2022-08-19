@@ -15,7 +15,6 @@ type Props = {
 
 export default function LatestItem(props: Props) {
   const {urlToImage, title, source, publishedAt} = props.item;
-  console.log(props.item);
   return (
     <TouchableOpacity style={styles.container}>
       <View>
