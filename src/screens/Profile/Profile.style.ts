@@ -1,4 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+import {RALEWAY_REGULAR} from '../../common/fonts';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,11 +16,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 50,
-    marginHorizontal: 30,
-    borderRadius: 10,
+    height: hp(7),
+    marginHorizontal: wp(1),
+    borderRadius: wp(2),
     backgroundColor: '#fff',
-    marginVertical: 4,
+    marginVertical: wp(1),
   },
   rowItems: {
     flexDirection: 'row',
@@ -26,6 +32,12 @@ const styles = StyleSheet.create({
   },
   showText: {
     marginLeft: 2,
+    color: '#000',
+    fontFamily: RALEWAY_REGULAR,
+  },
+  listText: {
+    color: '#000',
+    fontFamily: RALEWAY_REGULAR,
   },
 });
 

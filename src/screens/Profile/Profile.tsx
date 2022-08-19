@@ -82,7 +82,7 @@ export default function ProfileStack() {
                 <Ionicons name="language" size={20} color="#000" />
               </View>
               <View style={styles.showText}>
-                <Text>News Language [{language}]</Text>
+                <Text style={styles.listText}>News Language [{language}]</Text>
               </View>
             </View>
             <View style={styles.rowAction}>
@@ -95,7 +95,7 @@ export default function ProfileStack() {
                 <Ionicons name="location-outline" size={20} color="#000" />
               </View>
               <View style={styles.showText}>
-                <Text>News Location [{location}]</Text>
+                <Text style={styles.listText}>News Location [{location}]</Text>
               </View>
             </View>
             <View style={styles.rowAction}>
@@ -108,7 +108,7 @@ export default function ProfileStack() {
                 <Ionicons name="settings-outline" size={20} color="#000" />
               </View>
               <View style={styles.showText}>
-                <Text>Push Enabled [True]</Text>
+                <Text style={styles.listText}>Push Enabled [True]</Text>
               </View>
             </View>
             <View style={styles.rowAction}>
@@ -121,7 +121,7 @@ export default function ProfileStack() {
                 <Ionicons name="exit-outline" size={20} color="#000" />
               </View>
               <View style={styles.showText}>
-                <Text>Log Out</Text>
+                <Text style={styles.listText}>Log Out</Text>
               </View>
             </View>
             <View style={styles.rowAction}>

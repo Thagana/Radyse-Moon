@@ -3,7 +3,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {RALEWAY_BLACK, RALEWAY_BOLD} from '../../common/fonts';
+import {RALEWAY_REGULAR, RALEWAY_BOLD} from '../../common/fonts';
 
 const styles = StyleSheet.create({
   card: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   sourceText: {
-    fontFamily: RALEWAY_BLACK,
+    fontFamily: RALEWAY_REGULAR,
     color: '#007AFF',
   },
   cardFooter: {
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     marginVertical: hp(1),
   },
   publishedAtText: {
-    fontFamily: RALEWAY_BLACK,
+    fontFamily: RALEWAY_REGULAR,
     color: '#000',
   },
 });

@@ -4,7 +4,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 /** Screen */
-import SafeStackScreen from './SaveStack/SaveStack';
 import HomeStack from './HomeStack/HomeStack';
 import ProfileStack from './ProfileStack';
 
@@ -12,28 +11,17 @@ const Tab = createBottomTabNavigator();
 
 const TabScreen = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Tab.Screen
         name="Feed"
         component={HomeStack}
         options={{
           tabBarLabel: 'Feed',
           tabBarIcon: ({color}: {color: string}) => (
-            <Ionicons name="home" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Saved"
-        component={SafeStackScreen}
-        options={{
-          tabBarLabel: 'Saved',
-          tabBarIcon: ({color}) => (
-            <MaterialCommunityIcons
-              name="file-cabinet"
-              color={color}
-              size={26}
-            />
+            <Ionicons name="md-home-outline" size={24} color={color} />
           ),
         }}
       />

@@ -3,7 +3,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {RALEWAY_BLACK, RALEWAY_BOLD} from '../../../common/fonts';
+import {RALEWAY_REGULAR, RALEWAY_BOLD} from '../../../common/fonts';
 
 const styles = StyleSheet.create({
   container: {
@@ -40,15 +40,16 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   sourceText: {
-    fontFamily: RALEWAY_BLACK,
+    fontFamily: RALEWAY_REGULAR,
     color: '#007AFF',
+    fontSize: wp(4),
   },
   publishedAtText: {
-    fontFamily: RALEWAY_BLACK,
+    fontFamily: RALEWAY_REGULAR,
     color: '#fff',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
-    textShadowRadius: wp(2),
+    textShadowRadius: wp(4),
   },
   footer: {
     flexDirection: 'row',

@@ -11,7 +11,7 @@ const ProfileStackScreen = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <ProfileStack.Screen name="Profile" component={Profile} />
+      <ProfileStack.Screen name="ProfileScreen" component={Profile} />
     </ProfileStack.Navigator>
   );
 };

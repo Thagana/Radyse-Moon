@@ -3,26 +3,46 @@ import {View, Image, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import moment from 'moment';
 import styles from './Latest.styles';
+import {SharedElement} from 'react-navigation-shared-element';
 
 type Props = {
+  navigation: {
+    navigate(param: string, payload: any): void;
+  };
   item: {
     urlToImage: string;
     title: string;
     source: string;
     publishedAt: string;
+    description: string;
+    url: string;
   };
 };
 
-export default function LatestItem(props: Props) {
-  const {urlToImage, title, source, publishedAt} = props.item;
+export default function LatestItem({item, navigation}: Props) {
+  const {urlToImage, title, source, publishedAt, description, url} = item;
+  const handleNavigate = () => {
+    navigation.navigate('ArticleDetails', {
+      urlToImage,
+      title,
+      source,
+      publishedAt,
+      description,
+      url,
+    });
+  };
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={handleNavigate}>
       <View>
-        <Image source={{uri: urlToImage}} style={styles.image} />
+        <SharedElement id={`item.${urlToImage}.image`}>
+          <Image source={{uri: urlToImage}} style={styles.image} />
+        </SharedElement>
       </View>
       <View style={styles.content}>
         <View>
-          <Text style={styles.titleText}>{title}</Text>
+          <SharedElement id={`item.${urlToImage}.title`}>
+            <Text style={styles.titleText}>{title}</Text>
+          </SharedElement>
         </View>
         <View style={styles.footer}>
           <View>

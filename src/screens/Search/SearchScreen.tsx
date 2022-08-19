@@ -13,7 +13,14 @@ import Loading from '../../components/Loading';
 
 type SERVER_STATES = 'IDLE' | 'LOADING' | 'ERROR' | 'SUCCESS';
 
-const Home = () => {
+type Props = {
+  navigation: {
+    navigate(param: string): void;
+  };
+};
+
+const Search = (props: Props) => {
+  const {navigation} = props;
   const [term, setterm] = React.useState('');
   const [articles, setArticle] = React.useState([]);
   const [SERVER_STATE, setServerSate] = React.useState<SERVER_STATES>('IDLE');
@@ -77,7 +84,9 @@ const Home = () => {
       {SERVER_STATE === 'SUCCESS' && (
         <FlatList
           data={articles}
-          renderItem={({item}) => <Article item={item} isDownload={false} />}
+          renderItem={({item}) => (
+            <Article item={item} isDownload={false} navigation={navigation} />
+          )}
           keyExtractor={(_, index) => 'key-' + index}
         />
       )}
@@ -85,4 +94,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;
