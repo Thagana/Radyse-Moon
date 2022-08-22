@@ -41,7 +41,7 @@ export default function HeaderList(props: Props) {
         />
       </View>
       <View>
-        <Text style={styles.allNews}>Latest News</Text>
+        {latest.length > 0 && <Text style={styles.allNews}>Latest News</Text>}
       </View>
       <LatestNews latest={latest} navigation={navigation} />
       <View>

@@ -29,9 +29,12 @@ instance.interceptors.request.use(
     const user = (await AsyncStorage.getItem('token')) || '';
     baseURL = `${configs.APPLICATION_URL}`;
     const token = user;
+
     if (config.url && config.url.charAt(0) === '/') {
       config.url = `${baseURL}${config.url}`;
     }
+
+    console.log('HERE', config.url);
 
     if (config.headers) {
       config.headers.authorization = `Bearer ${token}`;

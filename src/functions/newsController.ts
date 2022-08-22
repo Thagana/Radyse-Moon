@@ -12,6 +12,9 @@ export const getAllNews = async (page: number, size: number) => {
     if (response.status === 200) {
       const responseData = response.data;
       const {data, success} = responseData;
+
+      console.log(typeof data, typeof success);
+
       if (success) {
         return {
           success: true,
@@ -64,4 +67,15 @@ export const getSearchedNews = async (query: string) => {
       data: [],
     };
   }
+};
+
+export const headLineNews = () => {
+  return new Promise<{data: any[]; success: boolean}>((resolve, reject) => {
+    Server.headlines()
+      .then(response => {
+        const {data, success} = response.data;
+        resolve({data, success});
+      })
+      .catch(error => reject(error));
+  });
 };

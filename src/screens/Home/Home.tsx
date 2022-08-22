@@ -2,7 +2,7 @@ import * as React from 'react';
 import {View, SafeAreaView, RefreshControl, FlatList} from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 import Article from '../../components/Articles/Article';
-import {getAllNews} from '../../functions/newsController';
+import {getAllNews, headLineNews} from '../../functions/newsController';
 import styles from './Home.style';
 import HeaderList from '../../components/HeaderList/HeaderList';
 
@@ -29,6 +29,7 @@ const Home = (props: Props) => {
   const [page, setPage] = React.useState(1);
   const [pageEnd, setPageEnd] = React.useState(false);
   const [size] = React.useState(10);
+  const [headlines, setHeadlines] = React.useState<any[]>([]);
 
   // SERVER STATES
   const [SERVER_STATE, setServerState] = React.useState('IDLE');
@@ -41,11 +42,11 @@ const Home = (props: Props) => {
         const {success, data} = await getAllNews(page, size);
         if (mounted.current) {
           if (success) {
-            if (data.data.length === 0) {
+            if (data.length === 0) {
               setPageEnd(true);
             } else {
               setArticle((prev: any) =>
-                Array.from(new UniqueNameSet([...prev, ...data.data]).values()),
+                Array.from(new UniqueNameSet([...prev, ...data]).values()),
               );
             }
             setServerState('SUCCESS');
@@ -59,6 +60,31 @@ const Home = (props: Props) => {
       console.log(error);
     }
   }, [connected, page, size]);
+
+  const fetchHeadLines = React.useCallback(async () => {
+    try {
+      if (connected) {
+        const {success, data} = await headLineNews();
+        if (mounted.current) {
+          if (success) {
+            if (data.length === 0) {
+              setPageEnd(true);
+            } else {
+              setHeadlines((prev: any) =>
+                Array.from(new UniqueNameSet([...prev, ...data]).values()),
+              );
+            }
+            setServerState('SUCCESS');
+          } else {
+            setServerState('ERROR');
+          }
+        }
+      }
+    } catch (error) {
+      setServerState('ERROR');
+      console.log(error);
+    }
+  }, [connected]);
 
   const fetchMoreData = () => {
     if (!pageEnd && !refreshing) {
@@ -110,6 +136,10 @@ const Home = (props: Props) => {
   }, [fetchNews, page]);
 
   React.useEffect(() => {
+    fetchHeadLines();
+  }, [fetchHeadLines]);
+
+  React.useEffect(() => {
     return () => {
       mounted.current = false;
     };
@@ -129,7 +159,7 @@ const Home = (props: Props) => {
               <HeaderList
                 navigation={props.navigation}
                 term={term}
-                latest={articles}
+                latest={headlines}
                 setTerm={setTerm}
               />
             }

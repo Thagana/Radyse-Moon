@@ -368,9 +368,13 @@ PODS:
     - React-Core
   - RNGestureHandler (2.5.0):
     - React-Core
+  - RNInAppBrowser (3.7.0):
+    - React-Core
   - RNScreens (3.15.0):
     - React-Core
     - React-RCTImage
+  - RNSharedElement (0.8.4):
+    - React-Core
   - RNSVG (13.0.0):
     - React-Core
   - SocketRocket (0.6.0)
@@ -440,7 +444,9 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSharedElement (from `../node_modules/react-native-shared-element`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -538,8 +544,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNInAppBrowser:
+    :path: "../node_modules/react-native-inappbrowser-reborn"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSharedElement:
+    :path: "../node_modules/react-native-shared-element"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   Yoga:
@@ -597,7 +607,9 @@ SPEC CHECKSUMS:
   ReactCommon: 8f67bd7e0a6afade0f20718f859dc8c2275f2e83
   RNCAsyncStorage: b2489b49e38c85e10ed45a888d13a2a4c7b32ea1
   RNGestureHandler: bad495418bcbd3ab47017a38d93d290ebd406f50
+  RNInAppBrowser: e36d6935517101ccba0e875bac8ad7b0cb655364
   RNScreens: 4a1af06327774490d97342c00aee0c2bafb497b7
+  RNSharedElement: eb7d506733952d58634f34c82ec17e82f557e377
   RNSVG: 42a0c731b11179ebbd27a3eeeafa7201ebb476ff
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: ff994563b2fd98c982ca58e8cd9db2cdaf4dda74
