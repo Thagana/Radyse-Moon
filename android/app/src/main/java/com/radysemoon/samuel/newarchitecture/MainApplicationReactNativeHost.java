@@ -1,4 +1,4 @@
-package com.radysemoon.newarchitecture;
+package com.radysemoon.samuel.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.radysemoon.BuildConfig;
-import com.radysemoon.newarchitecture.components.MainComponentsRegistry;
-import com.radysemoon.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.radysemoon.samuel.BuildConfig;
+import com.radysemoon.samuel.newarchitecture.components.MainComponentsRegistry;
+import com.radysemoon.samuel.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.radysemoon.newarchitecture.modules;
+package com.radysemoon.samuel.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
