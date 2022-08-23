@@ -13,8 +13,11 @@ class Server {
   static async getSettings() {
     return Axios.get('/user/settings');
   }
-  static async getHeadlines(page = 1, size = 10) {
-    return Axios.get(`/news/headlines?page=${page}&size=${size}`);
+  static async getAllNews(page = 1, size = 10) {
+    return Axios.get(`/news/all-news?page=${page}&size=${size}`);
+  }
+  static async headlines() {
+    return Axios.get('/news/headlines');
   }
   static async weatherLocation(location: {
     longitude: string;
