@@ -8,12 +8,10 @@ import Server from '../service/server';
  */
 export const getAllNews = async (page: number, size: number) => {
   try {
-    const response = await Server.getHeadlines(page, size);
+    const response = await Server.getAllNews(page, size);
     if (response.status === 200) {
       const responseData = response.data;
       const {data, success} = responseData;
-
-      console.log(typeof data, typeof success);
 
       if (success) {
         return {
@@ -39,6 +37,7 @@ export const getAllNews = async (page: number, size: number) => {
     };
   }
 };
+
 export const getSearchedNews = async (query: string) => {
   try {
     const response = await Server.searchNews(query);

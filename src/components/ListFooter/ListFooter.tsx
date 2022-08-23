@@ -6,7 +6,7 @@ import styles from './ListFooter.style';
 export default function ListFooter() {
   return (
     <View style={styles.container}>
-      <Text style={styles.footerText}>You have Reached the end</Text>
+      <Text>You have Reached the end</Text>
     </View>
   );
 }

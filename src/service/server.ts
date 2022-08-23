@@ -13,7 +13,7 @@ class Server {
   static async getSettings() {
     return Axios.get('/user/settings');
   }
-  static async getHeadlines(page = 1, size = 10) {
+  static async getAllNews(page = 1, size = 10) {
     return Axios.get(`/news/all-news?page=${page}&size=${size}`);
   }
   static async headlines() {

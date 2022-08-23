@@ -34,8 +34,6 @@ instance.interceptors.request.use(
       config.url = `${baseURL}${config.url}`;
     }
 
-    console.log('HERE', config.url);
-
     if (config.headers) {
       config.headers.authorization = `Bearer ${token}`;
     }
