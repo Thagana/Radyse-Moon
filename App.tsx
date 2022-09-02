@@ -6,6 +6,7 @@ import {
   useStoreRehydrated,
 } from 'easy-peasy';
 import FlashMessage from 'react-native-flash-message';
+import SplashScreen from 'react-native-splash-screen';
 
 import Routes from './src/routes/Route';
 
@@ -31,6 +32,9 @@ export const RootWrapper = () => {
 };
 
 export default function App() {
+  React.useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <StoreProviderCasted store={store}>
       <RootWrapper />
