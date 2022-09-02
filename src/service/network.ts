@@ -1,6 +1,7 @@
 import axios from 'axios';
 import configs from '../config/config';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import getFCMToken from '../utils/getToken';
 
 let baseURL = '';
 
@@ -36,6 +37,8 @@ instance.interceptors.request.use(
 
     if (config.headers) {
       config.headers.authorization = `Bearer ${token}`;
+      config.headers.fcm_token = await getFCMToken();
+      config.headers.token_title = 'MOBILE';
     }
 
     return config;

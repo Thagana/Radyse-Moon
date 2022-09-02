@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:214469640588:android:c571cc1d1e916ed566d6a9",
+        "mobilesdk_app_id": "1:214469640588:android:8b225eae1a774f9666d6a9",
         "android_client_info": {
-          "package_name": "com.RadyseMoon.samuel"
+          "package_name": "com.radysemoon.samuel"
         }
       },
       "oauth_client": [

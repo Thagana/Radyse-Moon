@@ -38,21 +38,12 @@ export default function Verify(props: Props) {
     try {
       if (mounted.current) {
         setSeverMessage('LOADING');
-
         const response = await Server.login(code);
-        if (response.status !== 200) {
-          showMessage({
-            message: response.data.message,
-            type: 'danger',
-          });
-          return;
-        }
-
         const {data} = response;
-
         if (data.success) {
           login(data.token);
           await AsyncStorage.setItem('token', data.token);
+          setSeverMessage('IDLE');
         } else {
           showMessage({
             message: response.data.message,
